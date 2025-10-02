@@ -8,5 +8,5 @@ export default defineConfig({
   server: {
     port: 5173, //
   },
-  base : "/hr-manager",
+  base : "/hr-manager/",
 })

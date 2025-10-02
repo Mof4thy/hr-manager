@@ -19,7 +19,7 @@ function App() {
     <>
       <LanguageProvider>
         <FormProvider>
-          <Router>
+          <Router basename="/hr-manager">
             <Routes>
               <Route path='/applicant-form' element={<ApplicantForm />} />
               <Route path='/login' element={<Login />} />
