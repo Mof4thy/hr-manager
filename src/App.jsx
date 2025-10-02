@@ -1,5 +1,5 @@
 import './index.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import HrDashboard from './pages/HrDashboard/HrDashboard'
 import ApplicantForm from './pages/ApplicantForm/ApplicantForm'
 import { FormProvider } from './context/FormContext'
@@ -26,7 +26,7 @@ function App() {
               
               <Route element={<ProtectedRoute />}>
                 <Route element={<Layout/>}>
-                  <Route path='/' element={<HrDashboard />} />
+                  <Route index element={<HrDashboard />} />
                   <Route path='/applications/:id' element={<ApplicationDetails />} />
                   <Route path='/profile' element={<Profile />} /> 
                   <Route element={<ProtectedRouteUserManagment />}>
@@ -34,6 +34,7 @@ function App() {
                   </Route>
                 </Route> 
               </Route>
+              <Route path='*' element={<Navigate to='/' replace />} />
             </Routes>
           </Router> 
         </FormProvider>
