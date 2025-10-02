@@ -20,11 +20,11 @@ const Navbar = () => {
 
     const handlenavigatetoprofile = (tab)=>{
         if(tab==="profile"){
-            navigate("/profile")
+            navigate("profile")
         }else if(tab==="dashboard"){
             navigate("/")
         }else if(tab==="user-managment"){
-            navigate("/user-managment")
+            navigate("user-managment")
         }
     }
 

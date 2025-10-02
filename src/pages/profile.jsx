@@ -11,7 +11,7 @@ const Profile = ()=>{
     const handleLogoutClick = async () => {
         try {
             await handleLogout()
-            navigate('/login')
+            navigate('login')
         } catch (error) {
             console.log(error)
         }   

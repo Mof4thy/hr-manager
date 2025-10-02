@@ -13,14 +13,14 @@ const ProtectedRouteUserManagment = () => {
 
     // Check if user is logged in first
     if (!user) {
-        return <Navigate to="/login" />
+        return <Navigate to="login" />
     }
 
     // Check if user has Admin role
     if (userRole === 'Admin') {
         return <Outlet />
     } else {
-        return <Navigate to="/hrdashboard" />
+        return <Navigate to="/" />
     }
 }
 

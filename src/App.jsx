@@ -21,16 +21,16 @@ function App() {
         <FormProvider>
           <Router>
             <Routes>
-              <Route path='/applicant-form' element={<ApplicantForm />} />
-              <Route path='/login' element={<Login />} />
+              <Route path='applicant-form' element={<ApplicantForm />} />
+              <Route path='login' element={<Login />} />
               
               <Route element={<ProtectedRoute />}>
                 <Route element={<Layout/>}>
                   <Route index element={<HrDashboard />} />
-                  <Route path='/applications/:id' element={<ApplicationDetails />} />
-                  <Route path='/profile' element={<Profile />} /> 
+                  <Route path='applications/:id' element={<ApplicationDetails />} />
+                  <Route path='profile' element={<Profile />} /> 
                   <Route element={<ProtectedRouteUserManagment />}>
-                    <Route path='/user-managment' element={<UserManagment />} />
+                    <Route path='user-managment' element={<UserManagment />} />
                   </Route>
                 </Route> 
               </Route>
