@@ -237,32 +237,32 @@ const StepPersonal = ({ checkValidStep, setValidMessage }) =>{
 
     // Options for dropdowns and checkboxes
     const militaryStatusOptions = [
-        { value: 'permanently_exempt', label: t('permanently-exempt') || 'Permanently Exempt' },
-        { value: 'deferred', label: t('deferred') || 'Deferred' },
-        { value: 'completed_service', label: t('completed-service') || 'Completed Service' },
-        { value: 'temporarily_exempt', label: t('temporarily-exempt') || 'Temporarily Exempt' }
+        { value: 'معفي نهائياً', label: t('permanently-exempt') || 'Permanently Exempt' },
+        { value: 'مؤجل', label: t('deferred') || 'Deferred' },
+        { value: 'أدى الخدمة', label: t('completed-service') || 'Completed Service' },
+        { value: 'معفي مؤقتاً', label: t('temporarily-exempt') || 'Temporarily Exempt' }
     ]
 
     const socialStatusOptions = [
-        { value: 'single', label: t('single') || 'Single' },
-        { value: 'married', label: t('married') || 'Married' },
-        { value: 'divorced', label: t('divorced') || 'Divorced' },
-        { value: 'widowed', label: t('widowed') || 'Widowed' },
-        { value: 'other', label: t('other') || 'Other' }
+        { value: 'أعزب', label: t('single') || 'Single' },
+        { value: 'متزوج', label: t('married') || 'Married' },
+        { value: 'مطلق', label: t('divorced') || 'Divorced' },
+        { value: 'أرمل', label: t('widowed') || 'Widowed' },
+        { value: 'أخرى', label: t('other') || 'Other' }
     ]
 
     const hasVehicleOptions = [
-        { value: 'yes', label: t('yes') },
-        { value: 'no', label: t('no') }
+        { value: 'نعم', label: t('yes') },
+        { value: 'لا', label: t('no') }
     ]
 
     const drivingLicenseOptions = [
-        { value: 'none', label: t('no-license') || 'No License' },
-        { value: 'private', label: t('private-license') || 'Private License' },
-        { value: 'professional-level-1', label: t('professional-license-level-1') || 'Professional License - Level 1' },
-        { value: 'professional-level-2', label: t('professional-license-level-2') || 'Professional License - Level 2' },
-        { value: 'professional-level-3', label: t('professional-license-level-3') || 'Professional License - Level 3' },
-        { value: 'motorcycle', label: t('motorcycle-license') || 'Motorcycle License' }
+        { value: 'لا يوجد', label: t('no-license') || 'No License' },
+        { value: 'رخصة خاصة', label: t('private-license') || 'Private License' },
+        { value: 'رخصة مهنية - مستوى 1', label: t('professional-license-level-1') || 'Professional License - Level 1' },
+        { value: 'رخصة مهنية - مستوى 2', label: t('professional-license-level-2') || 'Professional License - Level 2' },
+        { value: 'رخصة مهنية - مستوى 3', label: t('professional-license-level-3') || 'Professional License - Level 3' },
+        { value: 'رخصة دراجة نارية', label: t('motorcycle-license') || 'Motorcycle License' }
     ]
 
     return (

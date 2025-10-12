@@ -18,10 +18,10 @@ const StepSkills = ({ checkValidStep, setValidMessage }) => {
 
     // Skill level options
     const skillLevels = [
-        { value: 'weak', label: t('weak') },
-        { value: 'good', label: t('good') },
-        { value: 'very_good', label: t('very-good') },
-        { value: 'excellent', label: t('excellent') }
+        { value: 'ضعيف', label: t('weak') },
+        { value: 'جيد', label: t('good') },
+        { value: 'جيد جداً', label: t('very-good') },
+        { value: 'ممتاز', label: t('excellent') }
     ]
 
     // Predefined skills

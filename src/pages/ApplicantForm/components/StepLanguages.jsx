@@ -18,11 +18,11 @@ const StepLanguages = ({ checkValidStep, setValidMessage }) => {
 
     // Language proficiency levels
     const languageLevels = [
-        { value: 'beginner', label: t('beginner') },
-        { value: 'intermediate', label: t('intermediate') },
-        { value: 'advanced', label: t('advanced') },
-        { value: 'fluent', label: t('fluent') },
-        { value: 'native', label: t('native') }
+        { value: 'مبتدئ', label: t('beginner') },
+        { value: 'متوسط', label: t('intermediate') },
+        { value: 'متقدم', label: t('advanced') },
+        { value: 'طليق', label: t('fluent') },
+        { value: 'لغة أم', label: t('native') }
     ]
 
     const handleEnglishLevelChange = (level) => {
