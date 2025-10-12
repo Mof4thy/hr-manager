@@ -44,6 +44,15 @@ const StepEducation = ({ checkValidStep, setValidMessage }) => {
         })
     }
 
+    const handleEducationStatusChange = (value) => {
+        dispatch({ type: 'update_education_status', payload: value })
+        
+        // Automatically add an education entry if none exists
+        if (value && state.education.length === 0) {
+            dispatch({ type: "add_education" })
+        }
+    }
+
     // Handle field blur events
     const handleFieldBlur = (field, index) => {
         const fieldKey = `education_${field}_${index}`
@@ -188,7 +197,7 @@ const StepEducation = ({ checkValidStep, setValidMessage }) => {
                             <Select
                                 label={t('education-status')}
                                 value={state.educationStatus || ''}
-                                onChange={(e) => dispatch({ type: 'update_education_status', payload: e.target.value })}
+                                onChange={(e) => handleEducationStatusChange(e.target.value)}
                                 onBlur={() => validateSingleField('educationStatus')}
                                 options={[
                                     { value: 'student', label: t('student') },
