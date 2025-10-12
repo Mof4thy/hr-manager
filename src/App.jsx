@@ -10,7 +10,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import ProtectedRouteUserManagment from './pages/userManagment/components/ProtectedRoute'
 import Profile from './pages/profile'
 import Layout from './components/Layout'
-import UserManagment from './pages/UserManagment/userManagment'
+import UserManagment from './pages/userManagment/userManagment'
 
 
 function App() {
