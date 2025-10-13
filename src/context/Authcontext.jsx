@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react"
-import { login, logout, getProfile } from "../services/authService"
+import { login, logout, getProfile , changePassword} from "../services/authService"
 import { useQuery } from "@tanstack/react-query"
 import { queryClient } from "../main"
 
@@ -52,6 +52,19 @@ const AuthProvider = ({children}) => {
         }
 
     }
+
+
+    const handleChangePassword = async(currentPassword, newPassword, confirmPassword)=>{
+
+        try {
+            const response = await changePassword(currentPassword, newPassword, confirmPassword)
+            return response.message
+        } catch (error) {
+            throw new Error(error.response.data.message)
+        }
+    }
+
+
     
     const handleLogout = async () => {
         try {
@@ -74,7 +87,8 @@ const AuthProvider = ({children}) => {
         user,
         handleLogin,
         handleLogout,
-        useGetProfile
+        useGetProfile,
+        handleChangePassword
 
     }
 

@@ -19,4 +19,10 @@ const getProfile = async () => {
     return response.data
 }
 
-export { login, logout, getProfile }
+const changePassword = async (currentPassword, newPassword, confirmPassword)=>{
+    const response = await api.put('/auth/change-password', { currentPassword, newPassword, confirmPassword })
+    return response.data
+
+}
+
+export { login, logout, getProfile, changePassword }
